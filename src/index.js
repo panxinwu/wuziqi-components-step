@@ -1,22 +1,21 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './styles.css'
+import './styles.css'
 
-export default class ExampleComponent extends Component {
+export default class Step extends Component {
   static propTypes = {
-    text: PropTypes.string
+    onClick: PropTypes.func,
+    value: PropTypes.string
   }
 
   render() {
-    const {
-      text
-    } = this.props
-
+    const { onClick, value } = this.props
     return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
+      <button className='step'
+        onClick={onClick}>
+        {value}
+      </button>
     )
   }
 }
