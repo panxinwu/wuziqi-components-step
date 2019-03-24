@@ -12,8 +12,7 @@ export default class Step extends Component {
   render() {
     const { onClick, value } = this.props
     return (
-      <button className='step'
-        onClick={onClick}>
+      <button className='step' onClick={onClick}>
         {value}
       </button>
     )
